@@ -1,0 +1,45 @@
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  </head>
+
+  <body id='body'>
+  
+      <video id="video-tag-id" playsinline webkit-playsinline height="300" width="545"></video>
+  <script src="https://devadminplayer.sohatv.vn/resource/init-script/playerInitScript.js"></script>
+  <script>
+      var secureToken = "L3NlY3VyZS92ZXJpZnkvMmZ0cWJoZzltNnpvcGlnd2lxMDNod2ZwMzA0Mno5Z2kvMTAyNzAxL2V5SmhiR2NpT2lKSVV6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUp5WldZaU9pSWlMQ0poY0hCclpYa2lPaUl5Wm5SeFltaG5PVzAyZW05d2FXZDNhWEV3TTJoM1puQXpNRFF5ZWpsbmFTSXNJbkJzWVhsbGNpSTZNVEF5TnpBeExDSnBaMjV2Y21WRmVIQnBjbUYwYVc5dUlqcDBjblZsTENKcFlYUWlPakUyT1RReE5qSXpOemNzSW1WNGNDSTZNVFk1TkRFMk1qUTVOMzAuYUQtSkxFMlN5U0lGWmdkZ0ltWDVfS2tPYzNVcm5wMWw4c29XVGt4RUMzcw=="; // Được lấy từ trên trang quản lý
+      var params = {
+          vid: "https://d-2a4ab6e661954fb886a7dadae442daa4.vod-staging.bfcplatform.vn/.vod-d/tuoitre/471584752817336320/2023/9/8/dinh-tinh-truong-169415529422958988839.mp4", // là link của video (required)
+          volume: 0.6,
+          autoplay: true, // Option tự động play khi được init, (option)
+          muted: false,
+          mute: false
+  };
+
+  /* Và một số query data trên iframe url được đưa vào trong params ví dụ
+
+      location:
+      _info:40c06b3bf72e4ea0b8cebadba192635f
+      vtype:3
+      playType:1
+      _admParamTvc:0;1;0;0
+      _listsuggest:http://vtvapi1.cnnd.vn/aj-z1488/suggest-videos.htm
+      postroll:true
+      autoplay:true
+      nonVol:true
+      volume:0.6
+      boxVideoID:ifVideo-40c06b3bf72e4ea0b8cebadba192635f
+      nopre:true
+      midroll:0.8;20s
+  */
+  playerInitScript("video-tag-id", {
+      params: params,
+      secure: secureToken,
+  }, function(){
+      var player = this; // callback trả về player khi init thành công
+  });
+  </script>
+
+  </body>
